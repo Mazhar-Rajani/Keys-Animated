@@ -21,6 +21,7 @@ public class Key : MonoBehaviour
 
     private void Animate()
     {
+        text.color = Random.ColorHSV(0, 1, 0, 1, 1, 1);
         keyTransform.DOPunchPosition(new Vector3(0, height, 0), animTime, vibrato, elasticity).SetDelay(Random.Range(0f, maxDelay)).OnComplete(Animate);
     }
 }
